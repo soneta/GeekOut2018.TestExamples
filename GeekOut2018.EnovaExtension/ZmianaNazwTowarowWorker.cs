@@ -3,6 +3,7 @@ using GeekOut2018.EnovaExtension;
 using Soneta.Business;
 using Soneta.Tools;
 using Soneta.Towary;
+using Soneta.Types;
 
 [assembly: Worker(typeof(ZmianaNazwTowarowWorker), typeof(Towary))]
 
@@ -67,6 +68,7 @@ namespace GeekOut2018.EnovaExtension
 
         public string DodajPrefix { get; set; }
 
+        [Caption("Usuń prefix")]
         public string UsunPrefix { get; set; }
     }
 }
