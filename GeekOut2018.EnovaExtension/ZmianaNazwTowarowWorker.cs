@@ -33,7 +33,7 @@ namespace GeekOut2018.EnovaExtension
         }
 
         // Akcja jaka zostanie wykonana na danych w oparciu o ustawione parametry
-        [Action("Soneta Examples/Zmiana postfix-prefix", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
+        [Action("Soneta Examples/Zmiana prefixu", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
         public void ZmianaNazw()
         {
             using (var t = Params.Session.Logout(true))
@@ -46,19 +46,9 @@ namespace GeekOut2018.EnovaExtension
                         towar.Nazwa = Params.DodajPrefix + towar.Nazwa;
                     }
 
-                    if (!Params.DodajPostfix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(Params.DodajPostfix))
-                    {
-                        towar.Nazwa = towar.Nazwa + Params.DodajPostfix;
-                    }
-
                     if (!Params.UsunPrefix.IsNullOrEmpty() && towar.Nazwa.StartsWith(Params.UsunPrefix))
                     {
                         towar.Nazwa = towar.Nazwa.Substring(Params.UsunPrefix.Length);
-                    }
-
-                    if (!Params.UsunPostfix.IsNullOrEmpty() && towar.Nazwa.EndsWith(Params.UsunPostfix))
-                    {
-                        towar.Nazwa = towar.Nazwa.Substring(0, towar.Nazwa.Length - Params.UsunPostfix.Length);
                     }
                 }
                 t.Commit();
@@ -77,10 +67,6 @@ namespace GeekOut2018.EnovaExtension
 
         public string DodajPrefix { get; set; }
 
-        public string DodajPostfix { get; set; }
-
         public string UsunPrefix { get; set; }
-
-        public string UsunPostfix { get; set; }
     }
 }
