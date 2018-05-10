@@ -34,22 +34,21 @@ namespace GeekOut2018.EnovaExtension
         }
 
         // Akcja jaka zostanie wykonana na danych w oparciu o ustawione parametry
-        [Action("Soneta Examples/Zmiana prefixu", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
+        [Action("Soneta Examples/Zmiana postfiksu", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
         public void ZmianaNazw()
         {
             using (var t = Params.Session.Logout(true))
             {
                 foreach (var towar in Towary.Where(towar => Params.TypTowaru == towar.Typ))
                 {
-
-                    if (!Params.DodajPrefix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(Params.DodajPrefix))
+                    if (!Params.DodajPostfiks.IsNullOrEmpty() && !towar.Nazwa.StartsWith(Params.DodajPostfiks))
                     {
-                        towar.Nazwa = Params.DodajPrefix + towar.Nazwa;
+                        towar.Nazwa = towar.Nazwa + Params.DodajPostfiks;
                     }
 
-                    if (!Params.UsunPrefix.IsNullOrEmpty() && towar.Nazwa.StartsWith(Params.UsunPrefix))
+                    if (!Params.UsunPostfiks.IsNullOrEmpty() && towar.Nazwa.EndsWith(Params.UsunPostfiks))
                     {
-                        towar.Nazwa = towar.Nazwa.Substring(Params.UsunPrefix.Length);
+                        towar.Nazwa = towar.Nazwa.Substring(0, towar.Nazwa.Length - Params.UsunPostfiks.Length);
                     }
                 }
                 t.Commit();
@@ -66,9 +65,9 @@ namespace GeekOut2018.EnovaExtension
 
         public TypTowaru TypTowaru { get; set; }
 
-        public string DodajPrefix { get; set; }
+        public string DodajPostfiks { get; set; }
 
-        [Caption("Usuń prefix")]
-        public string UsunPrefix { get; set; }
+        [Caption("Usuń postfiks")]
+        public string UsunPostfiks { get; set; }
     }
 }
