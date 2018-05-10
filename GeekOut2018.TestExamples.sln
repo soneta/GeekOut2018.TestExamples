@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "After.Enova", "After.Enova"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{922983AD-733E-4701-AFC9-19FBB3D2B662}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekOut2018.EnovaExtension.Tests", "GeekOut2018.EnovaExtension.Tests\GeekOut2018.EnovaExtension.Tests.csproj", "{65C814D0-51E7-4AC7-8569-3EA25019CA86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{94EFEB3D-AD26-4B90-B905-75541030C5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94EFEB3D-AD26-4B90-B905-75541030C5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94EFEB3D-AD26-4B90-B905-75541030C5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C814D0-51E7-4AC7-8569-3EA25019CA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C814D0-51E7-4AC7-8569-3EA25019CA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C814D0-51E7-4AC7-8569-3EA25019CA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C814D0-51E7-4AC7-8569-3EA25019CA86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{81B4CF41-061B-470F-862B-3CAA7803F958} = {1E9A5D44-B1DC-49B2-B205-C5FF64BE5A85}
 		{927C5DCF-7374-4CC1-AF6A-0186DFCE4720} = {1E9A5D44-B1DC-49B2-B205-C5FF64BE5A85}
 		{54DFCB26-E0F1-42F7-8CF9-5510551A3618} = {1E9A5D44-B1DC-49B2-B205-C5FF64BE5A85}
+		{65C814D0-51E7-4AC7-8569-3EA25019CA86} = {922983AD-733E-4701-AFC9-19FBB3D2B662}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DBBFA60-92A7-4CCC-B394-601ADD71A33F}
