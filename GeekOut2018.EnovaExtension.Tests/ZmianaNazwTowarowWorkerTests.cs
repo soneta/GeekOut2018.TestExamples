@@ -18,7 +18,7 @@ namespace GeekOut2018.EnovaExtension.Tests
             // Arrange
             var worker = new ZmianaNazwTowarowWorker(Context)
             {
-                Towary = new[] { Bikini },
+                Towary = new[] {Bikini},
                 Params = new ZmianaNazwTowarowParams(Context)
                 {
                     DodajPostfiks = "xxx",
@@ -33,5 +33,48 @@ namespace GeekOut2018.EnovaExtension.Tests
             Assert.AreEqual("Bikini - Strój kąpielowy damskixxx", Bikini.Nazwa);
         }
 
+        [Test]
+        public void ZmianaNazwTowarowWorker_AddSuffixToSpecifiedTypeOnly_SuffixIsAddedToSpecifiedTypleOnly()
+        {
+            // Arrange
+            var worker = new ZmianaNazwTowarowWorker(Context)
+            {
+                Towary = new[] {Bikini, Montaz},
+                Params = new ZmianaNazwTowarowParams(Context)
+                {
+                    DodajPostfiks = "xxx",
+                    TypTowaru = TypTowaru.Usługa
+                }
+            };
+
+            // Act
+            worker.ZmianaNazw();
+
+            // Assert
+            Assert.AreEqual("Bikini - Strój kąpielowy damski", Bikini.Nazwa);
+            Assert.AreEqual("Montaż wiązań narciarskichxxx", Montaz.Nazwa);
+        }
+
+        [Test]
+        public void ZmianaNazwTowarowWorker_AddSuffixToMultipleArticles_SuffixIsAddedToMultipleArticles()
+        {
+            // Arrange
+            var worker = new ZmianaNazwTowarowWorker(Context)
+            {
+                Towary = new[] { Bikini, Buty45 },
+                Params = new ZmianaNazwTowarowParams(Context)
+                {
+                    DodajPostfiks = "xxx",
+                    TypTowaru = TypTowaru.Towar
+                }
+            };
+
+            // Act
+            worker.ZmianaNazw();
+
+            // Assert
+            Assert.AreEqual("Bikini - Strój kąpielowy damskixxx", Bikini.Nazwa);
+            Assert.AreEqual("Buty do nart Extreme 45xxx", Buty45.Nazwa);
+        }
     }
 }
