@@ -19,7 +19,7 @@ namespace GeekOut2018.EnovaExtension
 
         // Potrzebne dla akcji parametry
         [Context]
-        public ZmianaNazwTowarowParams @params
+        public ZmianaNazwTowarowParams Params
         {
             get;
             set;
@@ -36,31 +36,30 @@ namespace GeekOut2018.EnovaExtension
         [Action("Soneta Examples/Zmiana postfix-prefix", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
         public void ZmianaNazw()
         {
-            using (var t = @params.Session.Logout(true))
+            using (var t = Params.Session.Logout(true))
             {
-                foreach (var towar in Towary.Where(towar => @params.TypTowaru == towar.Typ))
+                foreach (var towar in Towary.Where(towar => Params.TypTowaru == towar.Typ))
                 {
 
-                    if (!@params.DodajPrefix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(@params.DodajPrefix))
+                    if (!Params.DodajPrefix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(Params.DodajPrefix))
                     {
-                        towar.Nazwa = @params.DodajPrefix + towar.Nazwa;
+                        towar.Nazwa = Params.DodajPrefix + towar.Nazwa;
                     }
 
-                    if (!@params.DodajPostfix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(@params.DodajPostfix))
+                    if (!Params.DodajPostfix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(Params.DodajPostfix))
                     {
-                        towar.Nazwa = towar.Nazwa + @params.DodajPostfix;
+                        towar.Nazwa = towar.Nazwa + Params.DodajPostfix;
                     }
 
-                    if (!@params.UsunPrefix.IsNullOrEmpty() && towar.Nazwa.StartsWith(@params.UsunPrefix))
+                    if (!Params.UsunPrefix.IsNullOrEmpty() && towar.Nazwa.StartsWith(Params.UsunPrefix))
                     {
-                        towar.Nazwa = towar.Nazwa.Substring(@params.UsunPrefix.Length);
+                        towar.Nazwa = towar.Nazwa.Substring(Params.UsunPrefix.Length);
                     }
 
-                    if (!@params.UsunPostfix.IsNullOrEmpty() && towar.Nazwa.EndsWith(@params.UsunPostfix))
+                    if (!Params.UsunPostfix.IsNullOrEmpty() && towar.Nazwa.EndsWith(Params.UsunPostfix))
                     {
-                        towar.Nazwa = towar.Nazwa.Substring(0, towar.Nazwa.Length - @params.UsunPostfix.Length);
+                        towar.Nazwa = towar.Nazwa.Substring(0, towar.Nazwa.Length - Params.UsunPostfix.Length);
                     }
-
                 }
                 t.Commit();
             }
