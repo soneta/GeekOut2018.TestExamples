@@ -9,7 +9,7 @@ namespace GeekOut2018.EnovaExtension.Tests
     public class ZmianaNazwTowarowWorkerTests : DbTransactionTestBase
     {
         [Test]
-        public void ZmianaNazw_AddSuffix_SuffixIsAdded()
+        public void ZmianaNazw_AddPostfix_PostfixIsAdded()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, "xxx");
@@ -22,7 +22,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazw_AddSuffixToSpecifiedTypeOnly_SuffixIsAddedToSpecifiedTypleOnly()
+        public void ZmianaNazw_AddPostfixToSpecifiedTypeOnly_PostfixIsAddedToSpecifiedTypleOnly()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Montaz }, TypTowaru.Usługa, "xxx");
@@ -36,7 +36,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazw_AddSuffixToMultipleArticles_SuffixIsAddedToMultipleArticles()
+        public void ZmianaNazw_AddPostfixToMultipleArticles_PostfixIsAddedToMultipleArticles()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Buty45 }, TypTowaru.Towar, "xxx");
@@ -52,7 +52,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         // Houston, we have a problem
         // There is a bug in existing sample code
         //[Test]
-        //public void ZmianaNazw_AddSuffixWhenSuffixAlreadyExists_SuffixShouldNotBeAdded()
+        //public void ZmianaNazw_AddPostfixWhenPostfixAlreadyExists_PostfixShouldNotBeAdded()
         //{
         //    // Arrange
         //    var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, "damski");
@@ -65,7 +65,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         //}
 
         [Test]
-        public void ZmianaNazw_RemoveSpecifiedSuffixFromOneArticle_SuffixIsRemoved()
+        public void ZmianaNazw_RemoveSpecifiedPostfixFromOneArticle_PostfixIsRemoved()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, null, " damski");
@@ -78,7 +78,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazw_RemoveSpecifiedSuffixFromMultipleArticles_SuffixIsRemovedFromArticlesThatHaveSpecifiedSufix()
+        public void ZmianaNazw_RemoveSpecifiedPostfixFromMultipleArticles_PostfixIsRemovedFromArticlesThatHaveSpecifiedPostfix()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Buty45 }, TypTowaru.Towar, null, " damski");
