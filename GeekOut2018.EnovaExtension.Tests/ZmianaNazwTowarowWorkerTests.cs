@@ -53,6 +53,33 @@ namespace GeekOut2018.EnovaExtension.Tests
             Assert.AreEqual("Buty do nart Extreme 45xxx", Buty45.Nazwa);
         }
 
+        [Test]
+        public void ZmianaNazwTowarowWorker_RemoveSpecifiedSuffixFromOneArticle_SuffixIsRemoved()
+        {
+            // Arrange
+            var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, null, " damski");
+
+            // Act
+            worker.ZmianaNazw();
+
+            // Assert
+            Assert.AreEqual("Bikini - Strój kąpielowy", Bikini.Nazwa);
+        }
+
+        [Test]
+        public void ZmianaNazwTowarowWorker_RemoveSpecifiedSuffixFromMultipleArticles_SuffixIsRemovedFromArticlesThatHaveSpecifiedSufix()
+        {
+            // Arrange
+            var worker = CreateWorker(new[] { Bikini, Buty45 }, TypTowaru.Towar, null, " damski");
+
+            // Act
+            worker.ZmianaNazw();
+
+            // Assert
+            Assert.AreEqual("Bikini - Strój kąpielowy", Bikini.Nazwa);
+            Assert.AreEqual("Buty do nart Extreme 45", Buty45.Nazwa);
+        }
+
         private ZmianaNazwTowarowWorker CreateWorker(Towar[] towary, TypTowaru typTowaru,
             string dodajPostfix, string usunPostfix = null)
         {
