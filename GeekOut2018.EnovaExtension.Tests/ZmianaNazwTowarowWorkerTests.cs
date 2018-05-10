@@ -13,7 +13,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         private Towar Montaz => Get<Towar>(new Guid("0f8a8597-e2d1-40a6-a8e5-cc1045228660"));
 
         [Test]
-        public void ZmianaNazwTowarowWorker_CanAddSuffix_SuffixIsAdded()
+        public void ZmianaNazwTowarowWorker_AddSuffix_SuffixIsAdded()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, "xxx");
