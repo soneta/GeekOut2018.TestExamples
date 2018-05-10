@@ -49,6 +49,21 @@ namespace GeekOut2018.EnovaExtension.Tests
             Assert.AreEqual("Buty do nart Extreme 45xxx", Buty45.Nazwa);
         }
 
+        // Houston, we have a problem
+        // There is a bug in existing sample code
+        //[Test]
+        //public void ZmianaNazw_AddSuffixWhenSuffixAlreadyExists_SuffixShouldNotBeAdded()
+        //{
+        //    // Arrange
+        //    var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, "damski");
+
+        //    // Act
+        //    worker.ZmianaNazw();
+
+        //    // Assert
+        //    Assert.AreEqual("Bikini - Strój kąpielowy damski", Bikini.Nazwa);
+        //}
+
         [Test]
         public void ZmianaNazw_RemoveSpecifiedSuffixFromOneArticle_SuffixIsRemoved()
         {
