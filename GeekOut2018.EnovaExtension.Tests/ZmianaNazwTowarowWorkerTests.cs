@@ -9,7 +9,7 @@ namespace GeekOut2018.EnovaExtension.Tests
     public class ZmianaNazwTowarowWorkerTests : DbTransactionTestBase
     {
         [Test]
-        public void ZmianaNazwTowarowWorker_AddSuffix_SuffixIsAdded()
+        public void ZmianaNazw_AddSuffix_SuffixIsAdded()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, "xxx");
@@ -22,7 +22,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazwTowarowWorker_AddSuffixToSpecifiedTypeOnly_SuffixIsAddedToSpecifiedTypleOnly()
+        public void ZmianaNazw_AddSuffixToSpecifiedTypeOnly_SuffixIsAddedToSpecifiedTypleOnly()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Montaz }, TypTowaru.Usługa, "xxx");
@@ -36,7 +36,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazwTowarowWorker_AddSuffixToMultipleArticles_SuffixIsAddedToMultipleArticles()
+        public void ZmianaNazw_AddSuffixToMultipleArticles_SuffixIsAddedToMultipleArticles()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Buty45 }, TypTowaru.Towar, "xxx");
@@ -50,7 +50,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazwTowarowWorker_RemoveSpecifiedSuffixFromOneArticle_SuffixIsRemoved()
+        public void ZmianaNazw_RemoveSpecifiedSuffixFromOneArticle_SuffixIsRemoved()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini }, TypTowaru.Towar, null, " damski");
@@ -63,7 +63,7 @@ namespace GeekOut2018.EnovaExtension.Tests
         }
 
         [Test]
-        public void ZmianaNazwTowarowWorker_RemoveSpecifiedSuffixFromMultipleArticles_SuffixIsRemovedFromArticlesThatHaveSpecifiedSufix()
+        public void ZmianaNazw_RemoveSpecifiedSuffixFromMultipleArticles_SuffixIsRemovedFromArticlesThatHaveSpecifiedSufix()
         {
             // Arrange
             var worker = CreateWorker(new[] { Bikini, Buty45 }, TypTowaru.Towar, null, " damski");
