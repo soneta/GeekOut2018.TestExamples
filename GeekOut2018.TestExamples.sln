@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekOut2018.EnovaUnitTestEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekOut2018.EnovaUnitTestExtension.Tests", "GeekOut2018.EnovaUnitTestExtension.Tests\GeekOut2018.EnovaUnitTestExtension.Tests.csproj", "{4F26CA80-4BE8-47D9-A114-C7B4544DE353}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicExample", "BasicExample", "{48971F4C-3C0F-4ED8-9EDA-A2C83B60EF42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{CC369AB2-E5E5-4C8C-9CCA-F6852B7BFC3F} = {48971F4C-3C0F-4ED8-9EDA-A2C83B60EF42}
 		{B2FB5BD5-4387-4738-934B-12A70807F06D} = {922983AD-733E-4701-AFC9-19FBB3D2B662}
 		{94EFEB3D-AD26-4B90-B905-75541030C5C9} = {81B4CF41-061B-470F-862B-3CAA7803F958}
 		{81B4CF41-061B-470F-862B-3CAA7803F958} = {1E9A5D44-B1DC-49B2-B205-C5FF64BE5A85}
