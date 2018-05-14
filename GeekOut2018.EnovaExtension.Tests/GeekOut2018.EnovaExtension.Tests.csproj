@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="..\TestLib\Soneta.Test.dll">
+      <Private>true</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.6.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.6.0\lib\net40\nunit.framework.dll</HintPath>
     </Reference>
@@ -45,10 +48,6 @@
     </Reference>
     <Reference Include="Soneta.Handel">
       <HintPath>$(SonetaBinaries)Soneta.Handel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Soneta.Test">
-      <HintPath>$(SonetaBinaries)Soneta.Test.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Types">
@@ -74,7 +73,7 @@
     <ProjectReference Include="..\GeekOut2018.EnovaExtension\GeekOut2018.EnovaExtension.csproj">
       <Project>{94efeb3d-ad26-4b90-b905-75541030c5c9}</Project>
       <Name>GeekOut2018.EnovaExtension</Name>
-      <Private>False</Private>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
