@@ -11,6 +11,9 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup>
+    <OutputPath>$(SonetaBinaries)</OutputPath>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -38,14 +41,14 @@
       <HintPath>..\packages\NUnit.3.6.0\lib\net40\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Soneta.Business">
-      <HintPath>D:\MyProjects\enova\bin\Debug\Soneta.Business.dll</HintPath>
+      <HintPath>$(SonetaBinaries)Soneta.Business.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Soneta.Handel">
-      <HintPath>D:\MyProjects\enova\bin\Debug\Soneta.Handel.dll</HintPath>
+      <HintPath>$(SonetaBinaries)Soneta.Handel.dll</HintPath>
     </Reference>
     <Reference Include="Soneta.Types">
-      <HintPath>D:\MyProjects\enova\bin\Debug\Soneta.Types.dll</HintPath>
+      <HintPath>$(SonetaBinaries)Soneta.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
