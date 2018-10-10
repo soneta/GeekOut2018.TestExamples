@@ -4,7 +4,7 @@
     <TargetFramework>net40</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Soneta.Products.Test" Version="$(EnovaPackageVersion)" />
+    <PackageReference Include="Soneta.Products.Test" Version="$(SonetaPackageVersion)" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
     <ProjectReference Include="..\GeekOut2018.EnovaExtension\GeekOut2018.EnovaExtension.csproj" />
   </ItemGroup>

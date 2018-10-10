@@ -2,6 +2,6 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-      <EnovaPackageVersion>15.1.0</EnovaPackageVersion>
+      <SonetaPackageVersion>15.1.0</SonetaPackageVersion>
   </PropertyGroup>
 </Project>

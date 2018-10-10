@@ -6,7 +6,7 @@
     <!--OutputPath>$(ExtensionOtput)</OutputPath-->
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Soneta.Handel" Version="$(EnovaPackageVersion)">
+    <PackageReference Include="Soneta.Handel" Version="$(SonetaPackageVersion)">
         <IncludeAssets>compile</IncludeAssets>
     </PackageReference>
   </ItemGroup>
