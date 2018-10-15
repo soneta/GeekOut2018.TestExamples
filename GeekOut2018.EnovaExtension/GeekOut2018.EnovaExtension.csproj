@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\MSBuild\common.soneta.assembly.props" />
   <PropertyGroup>
     <TargetFramework>net40</TargetFramework>
-    <!--OutputPath>$(ExtensionOtput)</OutputPath-->
+    <!--<OutputPath>$(ExtensionOtput)</OutputPath>-->
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Soneta.Handel" Version="$(SonetaPackageVersion)">

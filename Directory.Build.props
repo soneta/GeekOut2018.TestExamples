@@ -3,5 +3,6 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
       <SonetaPackageVersion>15.1.0</SonetaPackageVersion>
+      <ExtensionOtput>C:\Program Files\Common Files\Soneta\Assemblies\</ExtensionOtput>
   </PropertyGroup>
 </Project>
