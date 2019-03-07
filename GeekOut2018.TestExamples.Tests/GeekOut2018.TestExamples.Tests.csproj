@@ -4,8 +4,8 @@
     <TargetFramework>net40</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
-    <PackageReference Include="NUnit" Version="3.6.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="$(NUnit3TestAdapterVersion)" />
+    <PackageReference Include="NUnit" Version="$(NUnitVersion)" />
     <ProjectReference Include="..\GeekOut2018.TestExamples\GeekOut2018.TestExamples.csproj" />
   </ItemGroup>
 </Project>
