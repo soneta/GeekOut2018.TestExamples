@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using Soneta.Test.Poligon;
+using Soneta.Test;
 using Soneta.Towary;
 
 namespace GeekOut2018.EnovaExtension.Tests
