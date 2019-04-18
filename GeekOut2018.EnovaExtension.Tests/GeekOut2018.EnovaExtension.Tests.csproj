@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Soneta.Sdk">
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
-    <IsTestProject>true</IsTestProject>
+    <TargetFramework>$(SonetaTargetFramework)</TargetFramework>  
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Soneta.Products.Modules" Version="$(SonetaPackageVersion)" />
     <PackageReference Include="Soneta.Products.Test" Version="$(SonetaPackageVersion)" />
+    <PackageReference Include="Soneta.Products.Modules" Version="$(SonetaPackageVersion)" /> <!--Powinno być tylko Soneta.Products.Test-->
     <ProjectReference Include="..\GeekOut2018.EnovaExtension\GeekOut2018.EnovaExtension.csproj" />
   </ItemGroup>
 </Project>

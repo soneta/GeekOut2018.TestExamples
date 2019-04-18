@@ -2,6 +2,7 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+      <SonetaTargetFramework>net46</SonetaTargetFramework>
       <SonetaPackageVersion>1905.0.0-alfa-0416-g07090d5327</SonetaPackageVersion>
       <NUnitVersion>3.11.0</NUnitVersion>
       <ExtensionOtput>C:\Program Files\Common Files\Soneta\Assemblies\</ExtensionOtput>
