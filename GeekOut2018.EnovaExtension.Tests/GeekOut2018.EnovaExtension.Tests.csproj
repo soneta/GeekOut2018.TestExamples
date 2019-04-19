@@ -5,7 +5,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Soneta.Products.Test" Version="$(SonetaPackageVersion)" />
-    <PackageReference Include="Soneta.Products.Modules" Version="$(SonetaPackageVersion)" /> <!--Powinno być tylko Soneta.Products.Test-->
     <ProjectReference Include="..\GeekOut2018.EnovaExtension\GeekOut2018.EnovaExtension.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FluentAssertions" Version="5.6.0" />
+    <PackageReference Update="NSubstitute" Version="4.0.0" />
+    <PackageReference Update="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 </Project>
