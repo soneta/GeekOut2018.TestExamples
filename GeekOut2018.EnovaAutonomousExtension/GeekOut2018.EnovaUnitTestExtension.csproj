@@ -2,16 +2,7 @@
 <Project Sdk="Soneta.Sdk">
   <PropertyGroup>
     <TargetFramework>$(SonetaTargetFramework)</TargetFramework>
+    <IsAddonProject>true</IsAddonProject>
     <!--OutputPath>$(ExtensionOtput)</OutputPath-->
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Soneta.Products.Modules" Version="$(SonetaPackageVersion)">
-        <IncludeAssets>compile</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FluentAssertions" Version="5.6.0" />
-    <PackageReference Update="NSubstitute" Version="4.0.0" />
-    <PackageReference Update="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
 </Project>

@@ -5,7 +5,6 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="$(NUnitVersion)" />
     <ProjectReference Include="..\GeekOut2018.TestExamples\GeekOut2018.TestExamples.csproj" />
   </ItemGroup>
 </Project>
