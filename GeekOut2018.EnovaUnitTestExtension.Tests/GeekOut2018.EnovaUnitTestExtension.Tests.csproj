@@ -5,13 +5,7 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Soneta.Products.Test" Version="$(SonetaPackageVersion)" />
     <ProjectReference Include="..\GeekOut2018.EnovaAutonomousExtension\GeekOut2018.EnovaUnitTestExtension.csproj" />
     <ProjectReference Include="..\GeekOut2018.EnovaExtension\GeekOut2018.EnovaExtension.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FluentAssertions" Version="5.6.0" />
-    <PackageReference Update="NSubstitute" Version="4.0.0" />
-    <PackageReference Update="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 </Project>

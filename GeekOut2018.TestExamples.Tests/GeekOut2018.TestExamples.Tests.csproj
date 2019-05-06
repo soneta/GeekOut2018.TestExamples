@@ -8,9 +8,4 @@
     <PackageReference Include="NUnit" Version="$(NUnitVersion)" />
     <ProjectReference Include="..\GeekOut2018.TestExamples\GeekOut2018.TestExamples.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FluentAssertions" Version="5.6.0" />
-    <PackageReference Update="NSubstitute" Version="4.0.0" />
-    <PackageReference Update="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
 </Project>
