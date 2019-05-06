@@ -4,7 +4,6 @@
   <PropertyGroup>
       <SonetaTargetFramework>net46</SonetaTargetFramework>
       <SonetaPackageVersion>1905.0.1-alfa-0585-g0057bf001f</SonetaPackageVersion>
-      <NUnitVersion>3.11.0</NUnitVersion>
       <ExtensionOtput>C:\Program Files\Common Files\Soneta\Assemblies\</ExtensionOtput>
   </PropertyGroup>
 </Project>
