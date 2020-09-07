@@ -2,7 +2,7 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ExtensionOtput>C:\Program Files\Common Files\Soneta\Assemblies\</ExtensionOtput>
-    <SonetaBinaries>D:\MyProjects\enova\bin\Debug\</SonetaBinaries>
+      <SonetaTargetFramework>net46</SonetaTargetFramework>
+      <SonetaPackageVersion>1910.1.3</SonetaPackageVersion>
   </PropertyGroup>
 </Project>
